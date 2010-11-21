@@ -1,0 +1,20 @@
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-22 00:28:36
+hint
+project --topLevelPackage com.shekhar.playground.roo.poll --projectName poll
+hint
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+hint
+entity --class ~.domain.Poll --testAutomatically 
+hint
+field string --fieldName question --notNull 
+entity --class com.shekhar.playground.roo.poll.domain.Answer --testAutomatically 
+field string --fieldName answer --notNull 
+field set --fieldName answers --class com.shekhar.playground.roo.poll.domain.Poll --element com.shekhar.playground.roo.poll.domain.Answer --notNull 
+hint
+perform tests
+controller all --package com.shekhar.playground.roo.poll.web 
+logging setup --level INFO --package ALL_SPRING 
+logging setup --level DEBUG --package PROJECT 
+perform eclipse
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-22 00:33:52

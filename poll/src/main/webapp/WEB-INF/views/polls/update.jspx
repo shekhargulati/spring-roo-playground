@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_shekhar_playground_roo_poll_domain_Poll" modelAttribute="poll" path="/polls" z="uzGhAVDlulgYpVyykzBIits61XE=">
+        <field:input field="question" id="c_com_shekhar_playground_roo_poll_domain_Poll_question" required="true" z="GUMF3l+0eFz9lwCoewn9oWLBBIQ="/>
+        <field:select field="answers" id="c_com_shekhar_playground_roo_poll_domain_Poll_answers" itemValue="id" items="${answers}" multiple="true" path="/answers" required="true" z="6tMGwfE1Dj3h4pBe9GkF4aj+zsQ="/>
+    </form:update>
+</div>
