@@ -28,13 +28,14 @@ public class PublicRsvpController {
     }
 
     private Rsvp getRsvp() {
+        String code = null;
         Rsvp rsvp = new Rsvp();
         try {
-            String code = SecurityContextHolder.getContext().getAuthentication().getName();
+            code = SecurityContextHolder.getContext().getAuthentication().getName();
             rsvp.setCode(code);
             rsvp = Rsvp.findRsvpsByCodeEquals(code).getSingleResult();
         } catch (DataAccessException e) {
-            e.printStackTrace();
+            logger.info("No RSVP found for " + code);
         }
         return rsvp;
     }
