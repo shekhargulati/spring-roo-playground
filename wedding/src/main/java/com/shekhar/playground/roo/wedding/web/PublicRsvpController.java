@@ -1,7 +1,6 @@
 package com.shekhar.playground.roo.wedding.web;
 
 import java.util.Date;
-
 import org.apache.log4j.Logger;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -11,8 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
-
 import com.shekhar.playground.roo.wedding.domain.Rsvp;
+import org.springframework.mail.MailSender;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 
 @RequestMapping("/publicrsvp/**")
 @Controller
@@ -20,6 +21,12 @@ import com.shekhar.playground.roo.wedding.domain.Rsvp;
 public class PublicRsvpController {
 
     private Logger logger = Logger.getLogger(this.getClass());
+
+    @Autowired
+    private transient MailSender mailTemplate;
+
+    @Autowired
+    private transient SimpleMailMessage simpleMailMessage;
 
     @RequestMapping
     public String get(ModelMap modelMap) {
@@ -50,9 +57,15 @@ public class PublicRsvpController {
         }
         if (rsvp.getEmail().length() > 0) {
             logger.info("Sending email to " + rsvp.getEmail());
+            sendMessage(rsvp.getEmail(), "Congratulations your rsvp has been accepted");
         }
         modelMap.put("rsvp", rsvp);
         return "thanks";
     }
 
+    public void sendMessage(String mailTo, String message) {
+        simpleMailMessage.setTo(mailTo);
+        simpleMailMessage.setText(message);
+        mailTemplate.send(simpleMailMessage);
+    }
 }

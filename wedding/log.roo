@@ -29,3 +29,10 @@ logging setup --level DEBUG --package ALL_SPRING
 q
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-26 17:44:03
 // Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-27 20:10:53
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-27 20:28:48
+email sender setup --hostServer smtp.gmail.com --protocol SMTP --port 587 --username whyjava7 --password St@yk00l
+field email template --class ~.web.PublicRsvpController
+email template setup --from whyjava7@gmail.com --subject "Your RSVP has been created or updated"
+field email template --class ~.web.PublicRsvpController
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-27 20:35:56

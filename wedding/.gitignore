@@ -4,3 +4,8 @@ target
 .project
 .settings
 .springBeans
+/target
+/.classpath
+/.project
+/.springBeans
+/.settings
