@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_shekhar_playground_roo_wedding_domain_Rsvp" items="${rsvps}" z="iLt2Jvq44ZxsgEg3kjRu2gHcrtg=">
+        <table:table data="${rsvps}" id="l_com_shekhar_playground_roo_wedding_domain_Rsvp" path="/rsvps" z="XL6uB+YwdNMYho2yzrYm+JglkBY=">
+            <table:column id="c_com_shekhar_playground_roo_wedding_domain_Rsvp_code" property="code" z="uOA9U1mu8Z29DBqDzzd4laD4xX0="/>
+            <table:column id="c_com_shekhar_playground_roo_wedding_domain_Rsvp_email" property="email" z="s6r6ZJmYY6eD0ppGFEIibw7NUQY="/>
+            <table:column id="c_com_shekhar_playground_roo_wedding_domain_Rsvp_attending" property="attending" z="blwxHyHNonzJAnbTIFHAS3UpiFM="/>
+            <table:column id="c_com_shekhar_playground_roo_wedding_domain_Rsvp_specialRequests" property="specialRequests" z="/GLYbQorSLuuCT73z2Plz/dwGgI="/>
+            <table:column id="c_com_shekhar_playground_roo_wedding_domain_Rsvp_confirmed" property="confirmed" z="7N4IeGgXzCZHOcczcnKFke1T+CU="/>
+        </table:table>
+    </page:list>
+</div>
