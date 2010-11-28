@@ -9,10 +9,12 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.roo.addon.solr.RooSolrSearchable;
 
 @RooJavaBean
 @RooToString
 @RooEntity(finders = { "findRsvpsByCodeEquals" })
+@RooSolrSearchable
 public class Rsvp {
 
     @NotNull
