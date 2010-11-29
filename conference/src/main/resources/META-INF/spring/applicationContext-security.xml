@@ -13,8 +13,8 @@
         
         <!-- Configure these elements to secure URIs in your application -->
         <intercept-url pattern="/conferences/**" access="hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="/speakers/**" access="permitAll" />
-        <intercept-url pattern="/talkses/**" access="hasRole('ROLE_SPEAKER')" />
+        <intercept-url pattern="/speakers/form" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SPEAKER')"/>
+        <intercept-url pattern="/talkses/**" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SPEAKER')" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/**" access="permitAll" />
     </http>

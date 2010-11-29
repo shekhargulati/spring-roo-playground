@@ -1,13 +1,25 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
   <jsp:output omit-xml-declaration="yes" />
   <spring:message var="app_name" code="application_name" />
   <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" />
   <util:panel id="title" title="${title}">
     <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
+      <spring:message code="welcome_h3" arguments="${app_name}"/>
     </h3>
     <p>
-      <spring:message code="welcome_text" />
+      <spring:message code="welcome_text" htmlEscape="false"/>
     </p>
+    <sec:authorize access="!isAuthenticated()">
+    <table>
+    	<tr>
+    		<td><a href="/conference/login"><img src="http://www.ichromatography.com/assets/images/login-button.gif" border="0" alt="Login" /></a></td>
+    		<td><a href="/conference/speakers?form"> <img src="http://m10.indicthreads.com/wp-content/uploads/2010/10/button-register.jpg" border="0" alt="Register" /></a></td>
+    		<td><a href="/conference/talkses?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}"><img src="http://m10.indicthreads.com/wp-content/uploads/2010/10/button-sessions.jpg" border="0" alt="Talks" /></a></td> 
+			<td><a href="/conference/speakers?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}"> <img src="http://m10.indicthreads.com/wp-content/uploads/2010/10/button-speakers.jpg" border="0" alt="Speakers" /></a></td>   	
+    	</tr>
+    </table>
+    </sec:authorize>
+    
   </util:panel>
 </div>
+

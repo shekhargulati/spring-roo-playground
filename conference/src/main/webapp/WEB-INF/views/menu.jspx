@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:sec="http://www.springframework.org/security/tags" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
 	<jsp:output omit-xml-declaration="yes"/>
 	
-<menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-
- 		<menu:category id="c_conference" z="AT2eeOXY8HXZ0iUGqnNybUr05hg=">
-            <menu:item id="i_conference_new" messageCode="global_menu_new" url="/conferences?form" z="XiHdxwyqcG/59Rjj/Lq1iDdjRAQ="/>
-        <menu:item id="i_conference_list" messageCode="global_menu_list" url="/conferences?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="MPaIC4L+MsaxcupoqP9RtoNEGqU="/>
-        </menu:category>
+ 		
+		<menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+		<!-- To do CRUD on conference object you need to be admin -->
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+	 		<menu:category id="c_conference" z="AT2eeOXY8HXZ0iUGqnNybUr05hg=">
+	            <menu:item id="i_conference_new" messageCode="global_menu_new" url="/conferences?form" z="XiHdxwyqcG/59Rjj/Lq1iDdjRAQ="/>
+	        <menu:item id="i_conference_list" messageCode="global_menu_list" url="/conferences?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="MPaIC4L+MsaxcupoqP9RtoNEGqU="/>
+	        </menu:category>
+        </sec:authorize>
         
+        <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SPEAKER')">
          <menu:category id="c_speaker" z="rS4noAHoNlWcBl6zCoj4X4C3A7Y=">
-            <menu:item id="i_speaker_new" messageCode="global_menu_new" url="/speakers?form" z="9vuMKqKU39aKzgegx0btO/yANSM="/>
-        <menu:item id="i_speaker_list" messageCode="global_menu_list" url="/speakers?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="08sVWc46g34RzPaEgFI7n3CBIpQ="/>
-        <menu:item id="fi_speaker_emailandpasswordequals" messageCode="global_menu_find" url="/speakers?find=ByEmailAndPasswordEquals&amp;form" z="GqbPKsfw4hq3oUSgzt9DAVXB1Tc="/>
+        	<sec:authorize access="hasRole('ROLE_ADMIN')">
+            	<menu:item id="i_speaker_new" messageCode="global_menu_new" url="/speakers?form" z="9vuMKqKU39aKzgegx0btO/yANSM="/>
+            </sec:authorize>
+            <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SPEAKER')">
+	        <menu:item id="i_speaker_list" messageCode="global_menu_list" url="/speakers?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="08sVWc46g34RzPaEgFI7n3CBIpQ="/>
+	        </sec:authorize>
         </menu:category>
+        </sec:authorize>
         
+        
+        <sec:authorize access="hasRole('ROLE_SPEAKER')">
         <menu:category id="c_talks" z="62Cdg0xbACnIKUVm8OH2F2AlKgY=">
             <menu:item id="i_talks_new" messageCode="global_menu_new" url="/talkses?form" z="gtz2ZCGPD3x/nD9pabvnbmlEiAQ="/>
         <menu:item id="i_talks_list" messageCode="global_menu_list" url="/talkses?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="apmkTaAO32RPf1WxTMcU4z+XeeU="/>
         </menu:category>
+        </sec:authorize>
    
    
     </menu:menu>
+            
 </div>
