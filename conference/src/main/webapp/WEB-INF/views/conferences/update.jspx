@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_shekhar_roo_conference_domain_Conference" modelAttribute="conference" path="/conferences" z="AZQEm6iZf5cDDYg0EPb11kQY6bY=">
+        <field:input field="organizerName" id="c_com_shekhar_roo_conference_domain_Conference_organizerName" required="true" z="R7W16G3onHON47JPb7gWCNNEkqw="/>
+        <field:input field="organizerEmail" id="c_com_shekhar_roo_conference_domain_Conference_organizerEmail" required="true" z="2cJAGehWxObqx14WXiZ7Lxi8420="/>
+        <field:datetime dateTimePattern="${conference_startdate_date_format}" field="startDate" future="true" id="c_com_shekhar_roo_conference_domain_Conference_startDate" required="true" z="/OMLuxHwZpB6YscYD0aQQyhrRXw="/>
+        <field:datetime dateTimePattern="${conference_enddate_date_format}" field="endDate" future="true" id="c_com_shekhar_roo_conference_domain_Conference_endDate" required="true" z="85pefrcYf/2U1r/MSXDP6fBEroU="/>
+        <field:input field="website" id="c_com_shekhar_roo_conference_domain_Conference_website" z="Wb3sLz21aJEkLY69A6iJjX9OEpQ="/>
+        <field:simple field="talks" id="c_com_shekhar_roo_conference_domain_Conference_talks" messageCode="entity_reference_not_managed" messageCodeAttribute="Talks" z="Rrv5JQMFgpZapW/ezKXoTx7jzBc="/>
+    <field:input field="name" id="c_com_shekhar_roo_conference_domain_Conference_name" required="true" z="nwqyf3L4EyrLhMIyZhhG94WqQ6M="/>
+    <field:textarea field="description" id="c_com_shekhar_roo_conference_domain_Conference_description" z="NauX9bv3XjfIxKbTQ91t3UZrpyU="/>
+    </form:update>
+</div>

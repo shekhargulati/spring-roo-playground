@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_shekhar_roo_conference_domain_Talks" modelAttribute="talks" path="/talkses" z="4d5ezQ6hmCxUejZMafsIrj+9iog=">
+        <field:input field="title" id="c_com_shekhar_roo_conference_domain_Talks_title" required="true" z="O4TtF4NtwxnrPTMjf7GF/LDdzE0="/>
+        <field:input field="description" id="c_com_shekhar_roo_conference_domain_Talks_description" required="true" z="gVj3L+HgIzWcq1qCTt0pKRRlLFc="/>
+        <field:select field="conference" id="c_com_shekhar_roo_conference_domain_Talks_conference" itemValue="id" items="${conferences}" path="/conferences" z="vw9MIEsiQkzzZ+RVf0xo/QFJcXY="/>
+        <field:select field="speaker" id="c_com_shekhar_roo_conference_domain_Talks_speaker" itemValue="id" items="${speakers}" path="/speakers" z="rwpcxPJVtwKzkiOH3Ft6EHZEhlI="/>
+    </form:update>
+</div>

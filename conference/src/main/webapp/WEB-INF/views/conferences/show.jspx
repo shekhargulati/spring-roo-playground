@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_shekhar_roo_conference_domain_Conference" object="${conference}" path="/conferences" z="LqlvfkrYE4xN1JaCbrv0wjGs1eo=">
+        <field:display field="organizerName" id="s_com_shekhar_roo_conference_domain_Conference_organizerName" object="${conference}" z="BRvSr3bzAPPAjs/lNXOSbSKdkKA="/>
+        <field:display field="organizerEmail" id="s_com_shekhar_roo_conference_domain_Conference_organizerEmail" object="${conference}" z="ZJcxVPtKfxjTYpWbli74oHeDcX4="/>
+        <field:display date="true" dateTimePattern="${conference_startdate_date_format}" field="startDate" id="s_com_shekhar_roo_conference_domain_Conference_startDate" object="${conference}" z="nm0dKhDjRhWo25pZCf8kg2fP+h8="/>
+        <field:display date="true" dateTimePattern="${conference_enddate_date_format}" field="endDate" id="s_com_shekhar_roo_conference_domain_Conference_endDate" object="${conference}" z="V0kXUBDxCHFBtUY03IF6qabwCi4="/>
+        <field:display field="website" id="s_com_shekhar_roo_conference_domain_Conference_website" object="${conference}" z="7ea4CS61Fz9CC88UrlybD2rxW5U="/>
+        <field:display field="talks" id="s_com_shekhar_roo_conference_domain_Conference_talks" object="${conference}" z="FDNznZxq8Ikg7bYoSUNIy6HStgs="/>
+    <field:display field="name" id="s_com_shekhar_roo_conference_domain_Conference_name" object="${conference}" z="8EMaRNvbUYr4SyumfNorFaGc+OM="/>
+    <field:display field="description" id="s_com_shekhar_roo_conference_domain_Conference_description" object="${conference}" z="/F+Vo0uIyd/QnPhgf5qa+dD7Rn8="/>
+    </page:show>
+</div>

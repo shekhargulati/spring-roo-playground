@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_shekhar_roo_conference_domain_Speaker" items="${speakers}" z="Ufl1sopl0brNyqUmboNJTa/Z4Gg=">
+        <table:table data="${speakers}" id="l_com_shekhar_roo_conference_domain_Speaker" path="/speakers" z="NzPd/zCqXkBDYRFNT5Fq/4pQOrY=">
+            <table:column id="c_com_shekhar_roo_conference_domain_Speaker_gender" property="gender" z="10iOFwQyziqv+40mykuekE6LQsk="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Speaker_firstName" property="firstName" z="zgsp+QCl9RXN/oCTboNG+Sw+MJ0="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Speaker_lastName" property="lastName" z="CszD9dOatMvtXiCu53bW7xg/vsQ="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Speaker_email" property="email" z="WFUy0UOO8hsBgdYAVPwunKAdPaA="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Speaker_organization" property="organization" z="hqhDHM2pUSTN7/cmoIcHTJdotao="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Speaker_talks" property="talks" z="h4gKp1KJCk4gCCLPhAazCGKPJNI="/>
+        </table:table>
+    </page:list>
+</div>

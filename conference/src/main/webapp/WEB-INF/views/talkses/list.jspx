@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_shekhar_roo_conference_domain_Talks" items="${talkses}" z="M4Kyqqaaay41V89PrX5ZopMuc3c=">
+        <table:table data="${talkses}" id="l_com_shekhar_roo_conference_domain_Talks" path="/talkses" z="b8AVcxYg1x0Ur9B6r7tLZ3PLd7w=">
+            <table:column id="c_com_shekhar_roo_conference_domain_Talks_title" property="title" z="44MtDyeoTdy5wJwSZNKYtmvAvME="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Talks_description" property="description" z="H+JpN3FnCi9Qa0cE4AZHjNwVtVI="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Talks_conference" property="conference" z="QnHcJX+xpHJyo6jjvppFivlFvNY="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Talks_speaker" property="speaker" z="pB3fxcLCikGWvmLHblUn/+jAOTg="/>
+        </table:table>
+    </page:list>
+</div>

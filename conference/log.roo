@@ -1,0 +1,67 @@
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 11:59:16
+project --topLevelPackage com.shekhar.roo.conference
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+hint
+entity --class ~.domain.Conference --testAutomatically 
+field string --fieldName organizerName --notNull --
+field string --fieldName organizerEmail --notNull 
+field date --fieldName startDate --type java.util.Date --future --notNull 
+field date --fieldName endDate --type java.util.Date --future --notNull 
+field string --fieldName website
+entity --class ~.domain.Talks --testAutomatically 
+field string --fieldName title --notNull 
+field string --fieldName description --notNull 
+entity --class ~.domain.Speaker --testAutomatically 
+enum type --class ~.domain.Gender
+// [failed] enum constant --name Male 
+enum constant --name Female
+field enum --type ~.domain.Gender --fieldName gender --class ~.domain.Speaker --notNull 
+field string --fieldName firstName --notNull 
+field string --fieldName lastName --notNull 
+field string --fieldName email --notNull 
+field string --fieldName organization 
+field set --fieldName talks --element ~.domain.Talks --class ~.domain.Conference --cardinality ONE_TO_MANY 
+field reference --fieldName conference --type ~.domain.Conference --class ~.domain.Talks
+field reference --fieldName speaker --type ~.domain.Speaker --class ~.domain.Talks
+field set --fieldName talks --element ~.domain.Talks --class ~.domain.Speaker --cardinality ONE_TO_MANY 
+hint
+controller all --package ~.web
+logging setup --level INFO --package ALL_SPRING 
+hint
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 12:28:03
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 12:51:53
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 12:52:17
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 12:52:42
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 12:52:49
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 12:53:11
+enum constant --class ~.domain.Gender --name MALE
+field string --fieldName name --class ~.domain.Conference --notNull 
+field string --fieldName description --class ~.domain.Conference --sizeMax 4000
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 12:57:57
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 12:58:17
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 13:08:46
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 14:50:44
+security setup
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 14:53:28
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 15:02:29
+class --class ~.security.ConferenceAuthenticationProvider
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 15:10:20
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 16:46:03
+logging setup --level DEBUG --package SECURITY 
+logging setup --level DEBUG --package PROJECT 
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 16:46:28
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-29 17:43:08
+field string --class ~.domain.Speaker --fieldName password --notNull 
+finder list 
+finder list --depth 3
+finder list --depth 2 --filter email,password
+finder add --finderName findSpeakersByEmailAndPasswordEquals
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-29 17:54:02

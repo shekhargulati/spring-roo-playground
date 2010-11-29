@@ -15,7 +15,7 @@ privileged aspect VoteIntegrationTest_Roo_IntegrationTest {
     
     declare @type: VoteIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: VoteIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: VoteIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext.xml");
     
     declare @type: VoteIntegrationTest: @Transactional;
     

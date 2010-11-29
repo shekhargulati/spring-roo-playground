@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_shekhar_roo_conference_domain_Conference" items="${conferences}" z="jT5vuymRetTc2gwPDeZm0ASCwCA=">
+        <table:table data="${conferences}" id="l_com_shekhar_roo_conference_domain_Conference" path="/conferences" z="VlrQEaySNPQxrRN6qvL20eK3vC8=">
+            <table:column id="c_com_shekhar_roo_conference_domain_Conference_organizerName" property="organizerName" z="KGrxdeosetSjJQCpSLSNeCZ1bmI="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Conference_organizerEmail" property="organizerEmail" z="XTC1j8HNlWrPYqSrDxBaepsBOxI="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Conference_startDate" property="startDate" z="QnaxW+3FGjUyp22FrFjTP08Waas="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Conference_endDate" property="endDate" z="y24EKExir1hdtRPZM6HZOXEei28="/>
+            
+            
+        <table:column id="c_com_shekhar_roo_conference_domain_Conference_name" property="name" z="3gyf79mJIW8n7LEsmicLf2I/fcU="/>
+            <table:column id="c_com_shekhar_roo_conference_domain_Conference_description" property="description" z="sM5j39lzpZzu1+W3PoU6OWkwwPo="/>
+        </table:table>
+    </page:list>
+</div>

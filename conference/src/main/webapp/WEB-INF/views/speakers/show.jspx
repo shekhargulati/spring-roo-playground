@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_shekhar_roo_conference_domain_Speaker" object="${speaker}" path="/speakers" z="DAdk6AH8cnW8H2WeaxyksXx+xk0=">
+        <field:display field="gender" id="s_com_shekhar_roo_conference_domain_Speaker_gender" object="${speaker}" z="hYZMf/ghlNViPC/Ebw4QnPSslBg="/>
+        <field:display field="firstName" id="s_com_shekhar_roo_conference_domain_Speaker_firstName" object="${speaker}" z="u2FnB4jr+IUPHBVKbSCMHowbjrc="/>
+        <field:display field="lastName" id="s_com_shekhar_roo_conference_domain_Speaker_lastName" object="${speaker}" z="LXXhu2D2e7gnOYTyZ+waVUvombg="/>
+        <field:display field="email" id="s_com_shekhar_roo_conference_domain_Speaker_email" object="${speaker}" z="SCtFMMwhwZc+pm5m14yYquW2sWU="/>
+        <field:display field="organization" id="s_com_shekhar_roo_conference_domain_Speaker_organization" object="${speaker}" z="qzpihvqNfUexirmYnJ1fDu1Y6Es="/>
+        <field:display field="talks" id="s_com_shekhar_roo_conference_domain_Speaker_talks" object="${speaker}" z="qfS6FiiaSf8bN4yoOD/7IwlKtL0="/>
+    <field:display field="password" id="s_com_shekhar_roo_conference_domain_Speaker_password" object="${speaker}" z="4+odYqS20p0I7Svfc7QDoYQnsy8="/>
+    </page:show>
+</div>
