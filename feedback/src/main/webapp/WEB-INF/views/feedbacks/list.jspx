@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_shekhar_roo_feedback_domain_Feedback" items="${feedbacks}" z="wUcnfwDv8FounNiFvwcVRnCi/LY=">
+        <table:table data="${feedbacks}" id="l_com_shekhar_roo_feedback_domain_Feedback" path="/feedbacks" z="zkWktQ+j8ykyALhuhbsbsnUS9h4=">
+            <table:column id="c_com_shekhar_roo_feedback_domain_Feedback_email" property="email" z="reGbi3SG48u6SdGbPslQxlMEeNU="/>
+            <table:column id="c_com_shekhar_roo_feedback_domain_Feedback_sessionname" property="sessionname" z="i6IyFBmnhJMUdzPCmDB+3mAPkHE="/>
+            <table:column id="c_com_shekhar_roo_feedback_domain_Feedback_speaker" property="speaker" z="U0ORt8mbW6+4qi8gULCml3zg0t8="/>
+            <table:column id="c_com_shekhar_roo_feedback_domain_Feedback_fullname" property="fullname" z="IZ3PjYbOSwL+arJQdktvgRY5LvI="/>
+        <table:column id="c_com_shekhar_roo_feedback_domain_Feedback_feedback" property="feedback" z="GCAxJmQdaVRWuv/HsiP/MWai6EQ="/>
+        </table:table>
+    </page:list>
+</div>

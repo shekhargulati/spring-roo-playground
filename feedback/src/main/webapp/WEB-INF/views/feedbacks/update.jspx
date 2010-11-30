@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_shekhar_roo_feedback_domain_Feedback" modelAttribute="feedback" path="/feedbacks" versionField="none" z="2VMCWX8y3oRJaY0lVfNhRuXSxvg=">
+        <field:input field="email" id="c_com_shekhar_roo_feedback_domain_Feedback_email" required="true" validationMessageCode="field_invalid_email" z="ESxQH3L+1XJSx7IgxyOaxvid8XU="/>
+        <field:input field="sessionname" id="c_com_shekhar_roo_feedback_domain_Feedback_sessionname" required="true" z="2Rrj8sSayhahX56IjyU3TuJbTVg="/>
+        <field:input field="speaker" id="c_com_shekhar_roo_feedback_domain_Feedback_speaker" required="true" z="Q2TrQpct6NZagihrz7yIlmB0TRc="/>
+        <field:input field="fullname" id="c_com_shekhar_roo_feedback_domain_Feedback_fullname" required="true" z="CXQ6h0VXHHNC0HMR1/Db8bEfsh4="/>
+    <field:input field="feedback" id="c_com_shekhar_roo_feedback_domain_Feedback_feedback" required="true" z="UFgj1t2UZuy7xsql8Scju6JjFIY="/>
+    </form:update>
+</div>

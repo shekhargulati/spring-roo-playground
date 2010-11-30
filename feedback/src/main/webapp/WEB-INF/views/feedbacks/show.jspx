@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_shekhar_roo_feedback_domain_Feedback" object="${feedback}" path="/feedbacks" z="eMC9//WiiL3laI1ZjJk/RGXYs/8=">
+        <field:display field="email" id="s_com_shekhar_roo_feedback_domain_Feedback_email" object="${feedback}" z="To4hXORafgCrkSfpkfefk0nXcOY="/>
+        <field:display field="sessionname" id="s_com_shekhar_roo_feedback_domain_Feedback_sessionname" object="${feedback}" z="haBhMk2UkAvbVaxF5HJbr04pR1g="/>
+        <field:display field="speaker" id="s_com_shekhar_roo_feedback_domain_Feedback_speaker" object="${feedback}" z="YzkhQI3ah64jn7iJF09dERbVgw8="/>
+        <field:display field="fullname" id="s_com_shekhar_roo_feedback_domain_Feedback_fullname" object="${feedback}" z="AfNN+BAeJ3+TQ+42rC5NeFI0IwA="/>
+    <field:display field="feedback" id="s_com_shekhar_roo_feedback_domain_Feedback_feedback" object="${feedback}" z="M5d01XW0kCP+E/oCR3ICAVR+3to="/>
+    </page:show>
+</div>

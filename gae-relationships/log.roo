@@ -1,0 +1,25 @@
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-30 23:31:00
+focus --class Person
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-11-30 23:31:32
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-30 23:31:43
+project --topLevelPackage com.shekhar.roo.gae
+persistence setup --provider DATANUCLEUS --database GOOGLE_APP_ENGINE 
+entity --class ~.server.domain.Person --identifierType java.lang.String 
+field string --fieldName firstName
+field string --fieldName lastName
+entity --class ~.server.domain.Address --identifierType java.lang.String 
+field string --fieldName streetAddress
+field string --fieldName city
+field string --fieldName state --permitReservedWords
+field string --fieldName zip
+field reference --fieldName person --type Person
+focus --class Person
+field set --fieldName addresses --element Address --cardinality ONE_TO_MANY --mappedBy person
+gwt setup
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-11-30 23:40:29
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-01 00:43:53
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-01 01:38:33
+q
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-01 01:40:11
