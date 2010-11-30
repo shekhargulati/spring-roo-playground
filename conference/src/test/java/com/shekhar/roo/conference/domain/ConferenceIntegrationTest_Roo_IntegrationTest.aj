@@ -7,15 +7,12 @@ import com.shekhar.roo.conference.domain.ConferenceDataOnDemand;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect ConferenceIntegrationTest_Roo_IntegrationTest {
     
     declare @type: ConferenceIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
-    
-    declare @type: ConferenceIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext.xml");
     
     declare @type: ConferenceIntegrationTest: @Transactional;
     

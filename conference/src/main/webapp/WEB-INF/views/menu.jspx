@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:sec="http://www.springframework.org/security/tags" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
 	<jsp:output omit-xml-declaration="yes"/>
 	
  		
@@ -20,7 +20,8 @@
             <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SPEAKER')">
 	        <menu:item id="i_speaker_list" messageCode="global_menu_list" url="/speakers?page=${empty param.page ? 1 : param.page}&amp;size=${empty param.size ? 10 : param.size}" z="08sVWc46g34RzPaEgFI7n3CBIpQ="/>
 	        </sec:authorize>
-        </menu:category>
+        <menu:item id="fi_speaker_emailandpasswordequals" messageCode="global_menu_find" url="/speakers?find=ByEmailAndPasswordEquals&amp;form" z="GqbPKsfw4hq3oUSgzt9DAVXB1Tc="/>
+            </menu:category>
         </sec:authorize>
         
         

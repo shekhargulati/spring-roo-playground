@@ -15,7 +15,7 @@ privileged aspect ChoiceIntegrationTest_Roo_IntegrationTest {
     
     declare @type: ChoiceIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: ChoiceIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: ChoiceIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext.xml");
     
     declare @type: ChoiceIntegrationTest: @Transactional;
     

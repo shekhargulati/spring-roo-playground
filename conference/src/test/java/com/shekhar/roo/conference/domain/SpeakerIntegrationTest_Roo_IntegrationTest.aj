@@ -7,15 +7,12 @@ import com.shekhar.roo.conference.domain.SpeakerDataOnDemand;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect SpeakerIntegrationTest_Roo_IntegrationTest {
     
     declare @type: SpeakerIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
-    
-    declare @type: SpeakerIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext.xml");
     
     declare @type: SpeakerIntegrationTest: @Transactional;
     
